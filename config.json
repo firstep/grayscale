@@ -1,0 +1,15 @@
+{
+	"users":["firstep"],
+	"servers":{
+		"normal" : {"ups1":[["192.168.56.101",8080,false]],"ups2":[["192.168.56.101",8081,true]]},
+		"gray" : {"ups1":[["192.168.56.101",8083,false]]}
+	},
+	"auth":{
+        "app":{
+            "app1":"d56d4e239a4e90a6916d00b38a65b62b",
+            "app2":"f1a6d56d4e2910d8d966370e239a65b3"
+            },
+        "clients":["CLIENTNAME1", "CLIENTNAME2"]
+    },
+    "balance-policy":1
+}
