@@ -9,8 +9,8 @@
 * 将源码lualib下的文件拷贝到/usr/local/openresty/lualib/firstep目录。（/usr/local/openresty为[openrestry](https://openresty.org/cn/installation.html)的默认安装路径）
 * 把conf、lua、config.json等文件及目录放置到nginx的conf目录下（如：/usr/local/openresty/nginx/conf），修改config.json权限为666
 * 修改/usr/local/openresty/nginx/conf/nginx.conf，如：
-```ini
-worker_processes  4;              #nginx worker 数量
+```nginx
+worker_processes  4;              #nginx worker 数量
 error_log logs/error.log debug;   #指定错误日志文件路径，及日志级别
 events {
     worker_connections 1024;
@@ -135,8 +135,8 @@ signature：根据公式base64_encode(HMAC_SHA256(http body, key)生成；请求
      Body-Sign: sign_type="HMAC-SHA256",signature="qwertyuiopasdfghjklZxcvbnnnnnnnnnnnm12234"
      
 #### 注意
-    查询请求只校验appkey和appsecret。
-    提交请求必须校验body-sign。
+    GET请求只校验appkey和appsecret。
+    非GET请求必须校验body-sign。
 
 ## 后续
 * 可视化后台
